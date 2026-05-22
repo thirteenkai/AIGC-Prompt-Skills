@@ -94,7 +94,7 @@ python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-
 
 ## 更新
 
-当前没有自动更新机制。发布新版本后，通知组员重新安装对应 skill。
+当前没有自动更新机制。发布新版本后，通知使用者重新安装对应 skill。
 
 Codex 用户可执行：
 
