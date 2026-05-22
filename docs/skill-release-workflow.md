@@ -53,20 +53,28 @@ git push -u origin main
 
 ## Codex 安装
 
-安装前确认目标目录不存在旧副本。如果已存在，先删除对应目录。
+推荐先让支持 Skill 的 Agent 直接安装：
+
+```text
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
+```
+
+如果要在 Codex 里手动安装，安装前确认目标目录不存在旧副本。如果已存在，先删除对应目录。
 
 ```bash
 rm -rf ~/.codex/skills/image-prompt
 rm -rf ~/.codex/skills/video-prompt
 rm -rf ~/.codex/skills/aigc-storyboard-video-workflow
 
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
 
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
 
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
 ```
 
@@ -79,7 +87,7 @@ python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-g
 ```bash
 rm -rf ~/.codex/skills/<skill-name>
 
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/<skill-name>
 ```
 

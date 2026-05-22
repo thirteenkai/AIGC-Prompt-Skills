@@ -16,33 +16,81 @@
 
 ## 安装
 
-### Codex
+### 方式一：直接让 Agent 安装（推荐）
 
-把下面命令里的 `<skill-name>` 换成要安装的目录名：
+在 Claude Code、Codex、OpenClaw 等支持 Skill 的 Agent 里，直接说：
 
-```bash
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --url https://github.com/<your-org>/<your-repo>/tree/main/<skill-name>
+```text
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
 ```
 
-示例：
+```text
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
+```
+
+```text
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
+```
+
+装完后重启 Agent 生效。
+
+### 方式二：Codex 手动安装
+
+如果你使用 Codex，也可以直接执行：
 
 ```bash
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --url https://github.com/<your-org>/<your-repo>/tree/main/image-prompt
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
+
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
+
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
 ```
 
 安装后重启 Codex 生效。
 
-### Claude Code / 其他兼容 Agent
+## 使用
 
-可以让 Agent 安装指定 skill：
+### `image-prompt`
+
+用于图片生成、改图、多图参考或风格迁移。
+
+触发示例：
 
 ```text
-帮我安装这个 skill：https://github.com/<your-org>/<your-repo>/tree/main/image-prompt
+帮我把这个图片想法写成提示词
+把这张图的背景改成夜晚街道
+把图 2 的画风套到图 1 的角色上
 ```
 
-如果对方使用的是 Claude Code，也可以手动 clone 到本地 skills 目录，路径按对方环境为准。
+### `video-prompt`
+
+用于首帧 / 首尾帧转视频提示词。
+
+触发示例：
+
+```text
+这张首帧图帮我写视频提示词
+让这个角色慢慢转头看窗外
+这两张图做首尾帧，帮我写即梦视频提示词
+```
+
+### `aigc-storyboard-video-workflow`
+
+用于把剧情描述转成故事板提示词，并在故事板通过后生成视频提示词。
+
+触发示例：
+
+```text
+这段剧情帮我生成故事板提示词
+/检查剧情
+/生成故事板提示词
+/审核故事板
+/生成视频提示词
+/完整流程
+```
 
 ## 更新
 
@@ -53,8 +101,8 @@ Codex 用户可执行：
 ```bash
 rm -rf ~/.codex/skills/<skill-name>
 
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --url https://github.com/<your-org>/<your-repo>/tree/main/<skill-name>
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/<skill-name>
 ```
 
 然后重启 Codex。
