@@ -15,8 +15,8 @@
 
 ## 当前发布的 Skill
 
-- `image-prompt`
-- `video-prompt`
+- `aigc-image-prompt`
+- `aigc-video-prompt`
 - `aigc-storyboard-video-workflow`
 
 `storyboard-director` 是旧实验版，不发布，只归档。
@@ -56,23 +56,23 @@ git push -u origin main
 推荐先让支持 Skill 的 Agent 直接安装：
 
 ```text
-帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
-帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-image-prompt
+帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-video-prompt
 帮我安装这个 skill：https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
 ```
 
 如果要在 Codex 里手动安装，安装前确认目标目录不存在旧副本。如果已存在，先删除对应目录。
 
 ```bash
-rm -rf ~/.codex/skills/image-prompt
-rm -rf ~/.codex/skills/video-prompt
+rm -rf ~/.codex/skills/aigc-image-prompt
+rm -rf ~/.codex/skills/aigc-video-prompt
 rm -rf ~/.codex/skills/aigc-storyboard-video-workflow
 
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/image-prompt
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-image-prompt
 
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/video-prompt
+  --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-video-prompt
 
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --url https://github.com/thirteenkai/AIGC-Prompt-Skills/tree/main/aigc-storyboard-video-workflow
@@ -99,8 +99,8 @@ python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-
 archive_dir="$HOME/.cc-switch/skills-archive/$(date +%F)"
 mkdir -p "$archive_dir"
 
-mv "$HOME/.cc-switch/skills/image-prompt" "$archive_dir/" 2>/dev/null || true
-mv "$HOME/.cc-switch/skills/video-prompt" "$archive_dir/" 2>/dev/null || true
+mv "$HOME/.cc-switch/skills/aigc-image-prompt" "$archive_dir/" 2>/dev/null || true
+mv "$HOME/.cc-switch/skills/aigc-video-prompt" "$archive_dir/" 2>/dev/null || true
 mv "$HOME/.cc-switch/skills/aigc-storyboard-video-workflow" "$archive_dir/" 2>/dev/null || true
 mv "$HOME/.cc-switch/skills/storyboard-director" "$archive_dir/" 2>/dev/null || true
 ```
@@ -110,8 +110,8 @@ mv "$HOME/.cc-switch/skills/storyboard-director" "$archive_dir/" 2>/dev/null || 
 ## 验证清单
 
 ```bash
-test -f ~/.codex/skills/image-prompt/SKILL.md
-test -f ~/.codex/skills/video-prompt/SKILL.md
+test -f ~/.codex/skills/aigc-image-prompt/SKILL.md
+test -f ~/.codex/skills/aigc-video-prompt/SKILL.md
 test -f ~/.codex/skills/aigc-storyboard-video-workflow/SKILL.md
 ```
 

@@ -1,6 +1,6 @@
 # 视频模型能力实测档案
 
-本文件供 video-prompt skill 使用。**SKILL.md 不再硬写数字**（如"Seedance 15s 上限"），全部引用本文件。模型升级时**只改这一份**、SKILL.md 不动。
+本文件供 aigc-video-prompt skill 使用。**SKILL.md 不再硬写数字**（如"Seedance 15s 上限"），全部引用本文件。模型升级时**只改这一份**、SKILL.md 不动。
 
 ---
 

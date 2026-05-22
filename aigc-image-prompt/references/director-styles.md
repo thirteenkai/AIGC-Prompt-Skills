@@ -1,6 +1,6 @@
 # 导演范式 → prompt 翻译库（图片版）
 
-本文件供 image-prompt skill 使用。当用户说"我要王家卫那种感觉""像 Wes Anderson"时，本文件提供具体可执行的画面要素拆解 + prompt 模板。
+本文件供 aigc-image-prompt skill 使用。当用户说"我要王家卫那种感觉""像 Wes Anderson"时，本文件提供具体可执行的画面要素拆解 + prompt 模板。
 
 ---
 

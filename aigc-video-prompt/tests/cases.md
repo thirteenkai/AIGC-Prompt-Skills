@@ -1,6 +1,6 @@
-# video-prompt 评估集
+# aigc-video-prompt 评估集
 
-本文件供 video-prompt skill 使用。改 skill 后必跑回归。
+本文件供 aigc-video-prompt skill 使用。改 skill 后必跑回归。
 
 ---
 
@@ -21,7 +21,7 @@
 - [ ] 副导演**没有直接出 prompt**
 - [ ] 触发 Step 0 首帧质量检查
 - [ ] 明确指出瑕疵在哪（脸 / 手 / 边缘等）
-- [ ] 根据瑕疵类型给出对应路径（ComfyUI 放大 / 回 image-prompt 改图 / 重画）
+- [ ] 根据瑕疵类型给出对应路径（ComfyUI 放大 / 回 aigc-image-prompt 改图 / 重画）
 - [ ] 没在烂图上凑合写 prompt
 
 ### 用例 2：场景 A 首帧、首帧达标、信息不足

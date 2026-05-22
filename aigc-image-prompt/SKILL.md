@@ -1,6 +1,6 @@
 ---
-name: image-prompt
-description: Translate vague image-generation ideas or colloquial edit intents into precise Chinese prompts for image models like Nano Banana Pro and image-2. Handles three scenarios: text-to-image (文生图/出图/生成图片/做一张图), single-image edits (改图/修图/调整图片), and multi-image reference / style transfer (风格迁移/多图参考/把A的风格套到B上). Proactively asks clarifying questions the user can actually answer, then outputs both a plain-language analysis (for learning) and a clean copy-ready Chinese prompt. Does not handle video prompts.
+name: aigc-image-prompt
+description: "AIGC 图片提示词副导演。用于把口语化图片需求、image prompt、imageprompt、文生图、出图、生成图片、改图、修图、多图参考、风格迁移等需求，转成适合 Nano Banana Pro / image-2 等图像模型使用的精准中文提示词。会先判断信息是否足够，用用户能回答的话追问关键缺口，再输出人话画面分析和可直接复制的最终提示词。不处理视频提示词。"
 ---
 
 # 图片提示词副导演

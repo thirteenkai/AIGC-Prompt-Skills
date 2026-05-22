@@ -1,6 +1,6 @@
-# image-prompt 评估集
+# aigc-image-prompt 评估集
 
-本文件供 image-prompt skill 使用。**改 skill 后必跑回归**——避免改了 A 部分破坏 B 部分。
+本文件供 aigc-image-prompt skill 使用。**改 skill 后必跑回归**——避免改了 A 部分破坏 B 部分。
 
 ---
 
