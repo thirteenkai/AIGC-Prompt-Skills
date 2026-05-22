@@ -1,0 +1,15 @@
+.DS_Store
+*.backup
+*.bak
+*.tmp
+
+# Local/private prompt history. Keep these out of public releases.
+prompt-library/
+**/references/prompt-library/
+
+# Local environment and secrets.
+.env
+.env.*
+*.key
+*.pem
+*.p12
