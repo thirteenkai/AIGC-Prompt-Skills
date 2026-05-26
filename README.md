@@ -9,7 +9,7 @@
 | Skill | 用途 |
 | --- | --- |
 | `aigc-image-prompt` | 把口语化图片需求、改图需求、多图参考需求转成可复制的中文图片提示词 |
-| `aigc-video-prompt` | 把首帧 / 首尾帧图片和粗略动作描述转成中文视频提示词 |
+| `aigc-video-prompt` | 把首帧 / 首尾帧图片和粗略动作描述转成结构化中文视频提示词，默认输出导演四块结构 |
 | `aigc-storyboard-video-workflow` | 把短视频剧情描述转成 image-2 故事板提示词，并在故事板通过后生成视频提示词 |
 
 `storyboard-director` 是旧实验版，不在本仓库发布。
@@ -67,7 +67,7 @@ python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-
 
 ### `aigc-video-prompt`
 
-用于首帧 / 首尾帧转视频提示词。
+用于首帧 / 首尾帧 / 粗略动作描述转视频提示词。默认以即梦 Seedance 优先、兼容可灵等模型，输出“素材锚定 / 镜头与动作 / 场景光影 / 声音与约束”四块结构。
 
 触发示例：
 
@@ -75,6 +75,7 @@ python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-
 这张首帧图帮我写视频提示词
 让这个角色慢慢转头看窗外
 这两张图做首尾帧，帮我写即梦视频提示词
+这个 12 秒多动作链帮我写成 Seedance 视频提示词
 ```
 
 ### `aigc-storyboard-video-workflow`
